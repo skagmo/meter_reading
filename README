@@ -1,0 +1,3 @@
+# AMS meter parsing code
+
+aidon_read.py: Parses preliminary protocol used by Hafslund. Example usage: "./aidon_read.py /dev/ttyUSB0"
