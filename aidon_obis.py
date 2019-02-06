@@ -1,16 +1,21 @@
+# Aidon AMS meter parser, specifically for OBIS messages used by Hafslund meters
 # Needs crcmod (sudo pip install crcmod)
 
 import struct, crcmod
 
+# HDLC constants
 FLAG = '\x7e'
 ESCAPE = '\x7d'
-	
+
+# HDLC states	
 WAITING = 0	
 DATA = 1
 ESCAPED = 2
 
+# Number of objects in known frames
 LONG_FRAME_OBJECTS = 12
 
+# OBIS types
 TYPE_STRING = 0x0a
 TYPE_UINT32 = 0x06
 TYPE_INT16 = 0x10
@@ -32,7 +37,6 @@ class aidon:
 		# 5 control
 		# 6,7 HCS
 		# 8,9,10 LLC
-		# 11-16
 		frame_type = (ord(pkt[0]) & 0xf0) >> 4
 		length = ((ord(pkt[0]) & 0x07) << 8) + ord(pkt[1])
 

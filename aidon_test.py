@@ -1,7 +1,6 @@
 #!/usr/bin/python
 
 import serial, time, sys
-from hass_influx import *
 from aidon_obis import *
 
 if len (sys.argv) != 2:

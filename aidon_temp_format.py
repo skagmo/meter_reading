@@ -1,7 +1,7 @@
 #!/usr/bin/python
 
 import serial, time, struct, sys
-from libskagmo.hass_influx import *
+from hass_influx import *
 
 # SLIP constants
 FEND = '\xc0'
