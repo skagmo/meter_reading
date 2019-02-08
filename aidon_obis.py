@@ -1,4 +1,5 @@
 # Aidon AMS meter parser, specifically for OBIS messages used by Hafslund meters
+# skagmo.com, 2019
 # Needs crcmod (sudo pip install crcmod)
 
 import struct, crcmod
